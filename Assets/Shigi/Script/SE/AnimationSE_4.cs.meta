@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 023b5edc51ea20b4eb24608d912f84e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - RunningSE: {fileID: 8300000, guid: 3105e566f97791843a7de7c54983fea9, type: 3}
+  - AttackSE: {fileID: 8300000, guid: f5bd556ab9852424497895e01ce88a67, type: 3}
+  - AttackVC: {fileID: 8300000, guid: 6267db9f5435e234d85c6d9592d68748, type: 3}
+  - SkillsAttackSE_1: {fileID: 8300000, guid: 9a90f85c6abbce14bbcea659e36fc6c3, type: 3}
+  - SkillsAttackSE_2: {fileID: 8300000, guid: bb511f323b26c6b4f8b90a81739b9b1d, type: 3}
+  - SkillsAttackSE_3: {fileID: 8300000, guid: c41a0784a11c02d48b2daf9c56428ca9, type: 3}
+  - SkillsAttackVC: {fileID: 8300000, guid: 51efd27c5b2905d41a4567e7803b23ea, type: 3}
+  - DefenseVC: {fileID: 8300000, guid: 3b2185fbd13745e449cc5a1545c2067e, type: 3}
+  - DeathVC_1: {fileID: 8300000, guid: a12e33c55bfe2dc44a769976719f6f80, type: 3}
+  - DeathVC_2: {fileID: 8300000, guid: 885780b8c8d51d546b007a2cf7fdfdf5, type: 3}
+  - DeathVC_3: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

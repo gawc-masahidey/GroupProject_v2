@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f77a9775346170749ad7a5381ccf5ed6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - RunningSE: {fileID: 8300000, guid: 580354d9ad052cc47a84f7924602478f, type: 3}
+  - AttackSE: {fileID: 8300000, guid: c0cdc21240f2c4a458997da84acd675d, type: 3}
+  - AttackVC: {fileID: 8300000, guid: c6f38c8d7b0323d48b47e4eea1588df4, type: 3}
+  - DefenseVC: {fileID: 8300000, guid: e09103dbe0c0d3f48bcbd9630c3b6735, type: 3}
+  - DeathVC_1: {fileID: 8300000, guid: a50343f1384a4bd43a53656d0aa87e8b, type: 3}
+  - DeathVC_2: {fileID: 8300000, guid: c5359f8a533ba1c4386e540505cf8e39, type: 3}
+  - DeathVC_3: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
