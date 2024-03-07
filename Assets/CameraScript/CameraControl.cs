@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
+  
     [SerializeField] float keyboardInputSensitivity = 1f;
     Vector3 input;
 
@@ -13,7 +14,7 @@ public class CameraControl : MonoBehaviour
     {
         MoveCameraInput();
         MoveCamera();
-
+  
     }
 
     private void MoveCamera()

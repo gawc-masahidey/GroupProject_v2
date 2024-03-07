@@ -5,6 +5,8 @@ using UnityEngine;
 
 public abstract class Units : MonoBehaviour
 {
+
+    
     // 戦力
     public const float MAXFORCE = 10000f;
     public float nowForce { get; set; }
@@ -22,7 +24,7 @@ public abstract class Units : MonoBehaviour
 
     public bool enableUnit { get; set; }
 
-
+    public Vector2Int NowPos { get; set; }
 
     public event Action EndUnit;//ユニットのターンがエンドしたときに呼び出すイベント
 
@@ -75,4 +77,18 @@ public abstract class Units : MonoBehaviour
 
         unit.nowForce = unit.nowForce - damage;
     }
+
+    public void SetNowPos(GridObject gObj)
+    {
+        this.NowPos = gObj.positionOnGrid;
+        Debug.Log(NowPos);
+    }
+
+
+    public void HealToFull()
+    {
+        nowForce = MAXFORCE;
+    }
+
+
 }

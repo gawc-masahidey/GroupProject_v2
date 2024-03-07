@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MoveCharacter : MonoBehaviour
 {
     [SerializeField] GridMap targetGridMap;
     [SerializeField] LayerMask terrainLayerMask;
-
-    [SerializeField] GridObject targetCharacter;
 
     Pathfinding pathfinding;
     List<PathNode> path;
@@ -28,10 +27,20 @@ public class MoveCharacter : MonoBehaviour
             {
                 Vector2Int gridPosition = targetGridMap.GetGridPosition(hit.point);
 
-                path = pathfinding.FindPath(targetCharacter.positionOnGrid.x, targetCharacter.positionOnGrid.y, gridPosition.x, gridPosition.y);
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player1");
+                players = players.Concat(GameObject.FindGameObjectsWithTag("Player2")).ToArray();
 
-                targetCharacter.GetComponent<Movement>().Move(path);
+                foreach (GameObject player in players)
+                {
+                    GridObject gridObject = player.GetComponentInChildren<GridObject>();
+                        path = pathfinding.FindPath(gridObject.positionOnGrid.x, gridObject.positionOnGrid.y, gridPosition.x, gridPosition.y);
+                        if (path != null && path.Count > 0)
+                        {
+                            player.GetComponent<Movement>().Move(path);
+                            break; // Exit the loop after moving the first player found
+                        }
+                    }
+                }
             }
         }
-    }
 }

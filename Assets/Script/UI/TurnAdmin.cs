@@ -7,13 +7,11 @@ public class TurnAdmin : MonoBehaviour
     public bool IsRedTurn { get { return turn; } }
     public event Action OnTurnChanged; // Turnの状態が変化したときに呼び出すイベント
 
-    // Start is called before the first frame update
     void Start()
     {
         turn = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
 

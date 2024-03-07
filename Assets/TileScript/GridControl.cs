@@ -41,8 +41,9 @@ public class GridControl : MonoBehaviour
                     Debug.LogWarning("No path found!");
                 }
 
-                /*
+               
                 GridObject gridObject = targetGridMap.GetPlacedObject(gridPosition);
+                /*
                 if (gridObject == null)
                 {
                     Debug.Log("x=" + gridPosition.x + "y=" + gridPosition.y + " is empty");
@@ -58,6 +59,20 @@ public class GridControl : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (path != null && path.Count > 0)
+        {
+            Gizmos.color = Color.green;
+            for (int i = 0; i < path.Count - 1; i++)
+            {
+                Vector3 startPos = targetGridMap.GetWorldPosition(path[i].pos_x, path[i].pos_y, true);
+                Vector3 endPos = targetGridMap.GetWorldPosition(path[i + 1].pos_x, path[i + 1].pos_y, true);
+                Gizmos.DrawLine(startPos, endPos);
+            }
+        }
+    }
+    /*
+    private void OnDrawGizmos()
+    {
         if (path == null) { return; }
         if (path.Count == 0) { return; }
 
@@ -67,6 +82,6 @@ public class GridControl : MonoBehaviour
                 targetGridMap.GetWorldPosition(path[i + 1].pos_x, path[i + 1].pos_y, true)
                 );
         }
-    }
+    }*/
 
 }

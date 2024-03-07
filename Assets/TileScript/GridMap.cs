@@ -14,6 +14,8 @@ public class GridMap : MonoBehaviour
     [SerializeField] LayerMask obstacleLayer;
     [SerializeField] LayerMask terrainLayer;
 
+    
+
     private void Awake()
     {
         GenerateGrid();
@@ -160,7 +162,7 @@ public class GridMap : MonoBehaviour
     }
 
     public List<Vector3> ConvertPathNodesToWorldPositions(List<PathNode> path)
-    {
+       {
         List<Vector3> worldPositions = new List<Vector3>();
         
         for (int i = 0; i < path.Count; i++)

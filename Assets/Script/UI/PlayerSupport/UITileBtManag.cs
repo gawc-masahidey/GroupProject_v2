@@ -17,8 +17,8 @@ public class UITileBtManag : MonoBehaviour
     public GameObject SkillBtPrefab;
     public Transform panel;
 
-    public event Action<Units> OnPushAttackBt;
-    public event Action<Units> OnPushSkillBt;
+    //public event Action<Units> OnPushAttackBt;
+    //public event Action<Units> OnPushSkillBt;
     /*
     // Start is called before the first frame update
     void Start()
@@ -187,12 +187,12 @@ public class UITileBtManag : MonoBehaviour
         return true; // 仮の返り値、実際の条件に合わせて修正してください
     }
 
-    // ノード上のUnitsを取得するメソッド
+    /*// ノード上のUnitsを取得するメソッド
     private Units GetUnitsOnNode(Vector2 position)
     {
         // ノード上のUnitsを取得する処理
-        // 例えば、gmap.grid[(int)position.x, (int)position.y]からUnitsを取得するなど
-        return null; // 仮の返り値、実際の条件に合わせて修正してください
+        // 例えば、gmap.grid[(int)position.x, (int)position.y]からUnitsを取得するなど 
+        //} else {return null;} // 仮の返り値、実際の条件に合わせて修正してください
     }
     /*
     // スキルの処理
